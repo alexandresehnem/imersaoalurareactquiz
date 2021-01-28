@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const ButtonWrapper = styled.button`
   background-color: ${({ theme }) => theme.colors.primaryButton};
@@ -29,5 +30,10 @@ const Button = ({ children, ...otherProps }) => (
     {children}
   </ButtonWrapper>
 );
+
+Button.propTypes = {
+  type: PropTypes.oneOf(['submit', 'type', 'button']).isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default Button;

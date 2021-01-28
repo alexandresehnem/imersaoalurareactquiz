@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const InputWrapper = styled.input`
   background-color: ${({ theme }) => theme.colors.mainBg};
@@ -16,5 +17,16 @@ const Input = (props) => (
   // eslint-disable-next-line react/jsx-props-no-spreading
   <InputWrapper {...props} />
 );
+
+Input.defaultProps = {
+  value: '',
+};
+
+Input.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+};
 
 export default Input;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const QuizContainerElement = styled.div`
+const QuizContainerWrapper = styled.div`
   width: 100%;
   max-width: 350px;
   padding-top: 45px;
@@ -15,8 +15,8 @@ const QuizContainerElement = styled.div`
 // eslint-disable-next-line react/prop-types
 export default function QuizContainer({ children }) {
   return (
-    <QuizContainerElement>
+    <QuizContainerWrapper>
       {children}
-    </QuizContainerElement>
+    </QuizContainerWrapper>
   );
 }
