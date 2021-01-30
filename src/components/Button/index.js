@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const ButtonWrapper = styled.button`
-  background-color: ${({ theme }) => theme.colors.primaryButton};
-  border: 1px solid ${({ theme }) => theme.colors.primaryButton};
+  background-color: ${({ theme }) => theme.colors.primary};
+  border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: ${({ theme }) => theme.borderRadius};
   color: ${({ theme }) => theme.colors.contrastText};
   cursor: pointer;

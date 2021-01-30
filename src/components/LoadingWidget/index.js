@@ -1,4 +1,7 @@
 import React from 'react';
+import { Lottie } from '@crello/react-lottie';
+
+import loadingAnimation from './animation.json';
 
 import Widget from '../Widget';
 
@@ -10,7 +13,12 @@ function LoadingWidget() {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        <Lottie
+          width="200px"
+          height="200px"
+          className="lottie-container basic"
+          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+        />
       </Widget.Content>
     </Widget>
   );

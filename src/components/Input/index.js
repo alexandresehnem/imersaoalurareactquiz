@@ -11,6 +11,10 @@ const InputWrapper = styled.input`
   margin-bottom: 15px;
   padding: 10px;
   width: 100%;
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: ${({ theme }) => theme.colors.contrastText}DD;
+    opacity: 1; /* Firefox */
+  }
 `;
 
 const Input = (props) => (
