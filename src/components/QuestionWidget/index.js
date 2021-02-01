@@ -46,21 +46,24 @@ function QuestionWidget({
         </p>
 
         <AlternativesForm
-          onSubmit={(infosDoEvento) => {
-            infosDoEvento.preventDefault();
+          onSubmit={(event) => {
+            console.log(event);
+
+            event.preventDefault();
             setIsQuestionSubmited(true);
             setTimeout(() => {
               addResult(isCorrect);
-              onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
+              onSubmit();
             }, 3 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
-            const alternativeId = `alternative__${alternativeIndex}`;
+            const alternativeId = `question__${questionIndex}__alternative__${alternativeIndex}`;
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
             const isSelected = selectedAlternative === alternativeIndex;
+
             return (
               <Widget.Topic
                 as="label"
@@ -84,8 +87,21 @@ function QuestionWidget({
           <Button type="submit" disabled={!hasAlternativeSelected}>
             Confirmar
           </Button>
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+
+          {isQuestionSubmited && isCorrect && (
+            <p>
+              <strong>Parabéns!</strong>
+              {' '}
+              Você acertou!
+            </p>
+          )}
+          {isQuestionSubmited && !isCorrect && (
+            <p>
+              <strong>Que pena!</strong>
+              {' '}
+              Você errou!
+            </p>
+          )}
         </AlternativesForm>
       </Widget.Content>
     </Widget>

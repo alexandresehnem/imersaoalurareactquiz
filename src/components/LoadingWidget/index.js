@@ -1,11 +1,12 @@
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
 
-import loadingAnimation from './animation.json';
+import loadingBasketAnimation from './animation-basket.json';
+import loadingDefaultAnimation from './animation-default.json';
 
 import Widget from '../Widget';
 
-function LoadingWidget() {
+function LoadingWidget({ myQuiz }) {
   return (
     <Widget>
       <Widget.Header>
@@ -14,10 +15,12 @@ function LoadingWidget() {
 
       <Widget.Content>
         <Lottie
-          width="200px"
-          height="200px"
           className="lottie-container basic"
-          config={{ animationData: loadingAnimation, loop: true, autoplay: true }}
+          config={{
+            animationData: (myQuiz ? loadingBasketAnimation : loadingDefaultAnimation),
+            loop: true,
+            autoplay: true,
+          }}
         />
       </Widget.Content>
     </Widget>

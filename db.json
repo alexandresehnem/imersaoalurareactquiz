@@ -1,45 +1,72 @@
 {
-  "bg": "https://www.hitalent.co/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBMmJDQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1452099b706ad7d079f7a3a4dd5d702ebeeae45f/HiTalent.png",
-  "title": "Quiz JavaScript #AluraQuiz",
-  "description": "Um quiz rápido sobre o mundo do JavaScript",
+  "bg": "https://img.wallpapersafari.com/desktop/1680/1050/75/38/b6M5Pe.jpg",
+  "title": "Quiz NBA",
+  "description": "Um quiz sobre NBA, regras e curiosodades",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/j5P0DQIOf4PonLi55G/giphy.gif",
-      "title": "Qual a diferença entre = , == e === ?",
-      "description": "Pergunta fácil em!",
+      "image": "https://sportbucks.files.wordpress.com/2013/11/relogio.jpg",
+      "title": "Qual é o tempo de cada período de jogo?",
       "answer": 1,
       "alternatives": [
-        "São a mesma coisa",
-        "O = significa atribuição de valor. Já == verifica a igualdade do valor, enquanto === verifica valor e tipo de variável."
+        "10 minutos",
+        "12 minutos",
+        "14 minutos",
+        "15 minutos"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/Ie2Hs3A0uJRtK/giphy.gif",
-      "title": "Que tipos de dados são suportados em JavaScript?",
-      "description": "E agora? Você sabe?",
-      "answer": 0,
+      "image": "http://3.bp.blogspot.com/-v8cQmqFzi1A/VOHwcnvHfUI/AAAAAAAAInE/MBPeuLk_VfM/s1600/Gasols%2BBola%2BAlto%2B2.jpg",
+      "title": "Quantidade de jogadores em quadra por time?",
+      "answer": 1,
       "alternatives": [
-        "Number, String, Undefined, Null e Bool.",
-        "Int, String, Undefined, Null e Bool."
+        "4",
+        "5",
+        "6",
+        "7"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a diferença de window e global?",
-      "answer": 1,
+      "image": "https://clutchpoints.com/wp-content/uploads/2020/06/Top-seeded-teams-resting-their-stars-could-alter-the-NBA-playoff-picture.jpg",
+      "title": "Qual o número máximo de partidas em um duelo de playoff?",
+      "answer": 3,
       "alternatives": [
-        "São a mesma coisa",
-        "window é o escopo global no browser, e global no node"
+        "1",
+        "3",
+        "5",
+        "7"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/iI4vhciiVh2b3j9sgo/giphy.gif",
-      "title": "Qual a forma antiga de trabalhar com AJAX na Web?",
+      "image": "https://lancelivre.pt/wp-content/uploads/2017/12/16_lebron-770x537.jpg",
+      "title": "Com quantas faltas pessoais o jogador é expulso do jogo?",
       "answer": 1,
       "alternatives": [
-        "JSONHttpRequest",
-        "XMLHttpRequest",
-        "fetch"
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "image": "https://www.guiadoscuriosos.com.br/wp-content/uploads/2017/08/1-1.jpg",
+      "title": "Qual o tempo de posse de bola para arremesso?",
+      "answer": 1,
+      "alternatives": [
+        "20 segundos",
+        "24 segundos",
+        "30 segundos",
+        "Nâo tem tempo definido"
+      ]
+    },
+    {
+      "image": "https://conteudo.imguol.com.br/blogs/31/files/2015/10/trofeu1.jpg",
+      "title": "Qual o jogador com mais títulos da NBA?",
+      "answer": 2,
+      "alternatives": [
+        "Sam Jones",
+        "Michael Jordan",
+        "Bill Russell",
+        "LeBron James"
       ]
     }
   ],
@@ -49,12 +76,12 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#222222",
-      "secondary": "#e89c3f",
+      "primary": "#e8570e",
+      "secondary": "#E80E34",
       "mainBg": "#213f4e",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
+      "wrong": "#e8c40e",
+      "success": "#32e80e"
     },
     "borderRadius": "4px"
   }

@@ -65,10 +65,10 @@ export default function Home() {
 
         <Widget
           as={motion.section}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
           variants={{
-            show: { opacity: 1 },
-            hidden: { opacity: 0 },
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
           }}
           initial="hidden"
           animate="show"
@@ -100,10 +100,10 @@ export default function Home() {
         </Widget>
         <Footer
           as={motion.footer}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 1, duration: 1 }}
           variants={{
-            show: { opacity: 1 },
-            hidden: { opacity: 0 },
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
           }}
           initial="hidden"
           animate="show"

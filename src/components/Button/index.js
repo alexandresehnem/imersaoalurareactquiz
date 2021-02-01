@@ -19,7 +19,7 @@ const ButtonWrapper = styled.button`
 
   &:disabled {
     cursor: default;
-    opacity: 0.5;
+    opacity: 0.6;
   }
 `;
 

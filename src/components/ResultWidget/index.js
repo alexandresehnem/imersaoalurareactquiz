@@ -5,6 +5,11 @@ import Widget from '../Widget';
 import BackLinkArrow from '../BackLinkArrow';
 
 function ResultWidget({ results }) {
+  const total = results.length;
+  // eslint-disable-next-line radix
+  const half = parseInt(total / 2);
+  const corrects = results.filter((x) => x).length;
+
   return (
     <Widget>
       <Widget.Header>
@@ -13,27 +18,21 @@ function ResultWidget({ results }) {
       </Widget.Header>
 
       <Widget.Content>
-        <p>
+        <h2>
           Você acertou
           {' '}
-          {results.filter((x) => x).length}
+          {corrects}
+          {' '}
+          de
+          {' '}
+          {total}
           {' '}
           perguntas
-        </p>
-        <ul>
-          {results.map((result, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <li key={`result__${index}`}>
-              #
-              {index + 1}
-              {' '}
-              Resultado:
-              {result === true
-                ? 'Acertou'
-                : 'Errou'}
-            </li>
-          ))}
-        </ul>
+        </h2>
+        { total === corrects && <p>Parabéns! você acertou todas as respostas.</p>}
+        { total !== corrects && corrects > half
+          && <p>Por pouco! você foi muito bem, tente novamente.</p>}
+        { total !== corrects && corrects <= half && <p>Que pena! tente novamente.</p>}
       </Widget.Content>
     </Widget>
   );
